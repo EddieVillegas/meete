@@ -4,7 +4,7 @@ import FormLabel from "@/src/shared/components/forms/FormLabel"
 
 export default function LoginForm() {
     return (
-        <Form>
+        <Form method="POST">
             <FormLabel/>
             <FormInput/>
             <label className="block" htmlFor="password">password</label>
