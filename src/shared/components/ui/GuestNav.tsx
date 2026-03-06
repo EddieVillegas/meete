@@ -11,7 +11,7 @@ export default function GuestNav() {
             </Link>
             <Link 
                 className="font-bold text-sm bg-pink-600 p-2 text-white"
-                href="/auth/create-account"    
+                href="/auth/register"    
             >
                 Register
             </Link>

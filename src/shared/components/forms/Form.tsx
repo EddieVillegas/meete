@@ -5,6 +5,7 @@ type Props = FormHTMLAttributes<HTMLFormElement>
 
 export const Form = ({
     className,
+    children,
     ...props
 }: Props
 ) =>
@@ -12,5 +13,5 @@ export const Form = ({
         {...props}
         className={clsx("mt-10 space-y-3", className)}
     >
-        {props.children}
+        {children}
     </form>
