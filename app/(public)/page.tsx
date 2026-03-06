@@ -1,6 +1,6 @@
 import { Metadata } from "next"
 
-import Link from "next/link"
+import Hero from "@/components/ui/Hero"
 
 export const metadata: Metadata = {
   title: "Meeti - Home"
@@ -9,8 +9,7 @@ export const metadata: Metadata = {
 export default function Home(){
   return (
     <>
-    <h1>Inicio</h1>
-    <Link href="/about">Go to about</Link>
+    <Hero/>
     </>
   )
 }
