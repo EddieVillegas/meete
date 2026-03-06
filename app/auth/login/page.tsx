@@ -7,6 +7,11 @@ export const metadata: Metadata = {
 
 export default function LoginPage(){
     return(
-        <Heading>Login</Heading>
+        <>
+            <Heading>Login</Heading>
+            <Heading level={4} className="text-center">Login</Heading>
+            <Heading level={3}>Login</Heading>
+            <Heading level={5}>Login</Heading>
+        </>
     )
 }
