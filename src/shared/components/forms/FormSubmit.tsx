@@ -3,11 +3,10 @@ import { InputHTMLAttributes } from "react"
 
 type Props = InputHTMLAttributes<HTMLInputElement>
 
-export default function FormSubmit({ 
+export const FormSubmit = ({ 
     className,
     ...props 
-}: Props) {
-  return (
+}: Props) =>
     <input
         {...props}
         type="submit"
@@ -16,5 +15,3 @@ export default function FormSubmit({
             className
         )} 
     />
-  )
-}
