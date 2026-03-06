@@ -1,9 +1,10 @@
 import { Metadata } from "next"
 
 import Hero from "@/components/ui/Hero"
+import { generatePageTitle } from "@/src/shared/utils/metadata"
 
 export const metadata: Metadata = {
-  title: "Meeti - Home"
+  title: generatePageTitle('Home')
 }
 
 export default function Home(){
