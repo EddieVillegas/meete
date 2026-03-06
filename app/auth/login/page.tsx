@@ -1,3 +1,4 @@
+import Heading from "@/components/typography/Heading";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,6 +7,6 @@ export const metadata: Metadata = {
 
 export default function LoginPage(){
     return(
-        <h1>Login</h1>
+        <Heading>Login</Heading>
     )
 }
