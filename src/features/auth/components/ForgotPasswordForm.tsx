@@ -4,15 +4,14 @@ export default function ForgotPasswordForm(){
     return(
         <Form>
             <FormLabel>email</FormLabel>
-            <FormInput 
+            <FormInput
                 type="email"
                 id="email"
                 placeholder="email"
                 />
-
             <FormSubmit
                 value="Send"
-                />
+            />
         </Form>
     )
 }

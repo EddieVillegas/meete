@@ -13,9 +13,19 @@ export default function LoginPage(){
         <>
             <Heading>Login</Heading>
             <LoginForm/>
-            <nav>
-                <Link href='/auth/register' className="font-bold">Create account</Link>
-                <Link href="/auth/forgot-password" className="font-bold">Forgot password</Link>
+            <nav className="mt-20 flex justify-between">
+                <Link
+                    href='/auth/register'
+                    className="font-bold"
+                >
+                        Create account
+                </Link>
+                <Link
+                    href="/auth/forgot-password"
+                    className="font-bold"
+                >
+                        Forgot password
+                </Link>
             </nav>
         </>
     )
