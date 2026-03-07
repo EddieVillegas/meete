@@ -1,4 +1,4 @@
-import RegisterForm from '@/src/features/auth/RegisterForm'
+import RegisterForm from '@/src/features/auth/components/RegisterForm'
 import Heading from '@/src/shared/components/typography/Heading'
 import Link from 'next/link'
 
