@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -23,6 +24,9 @@ export default function RootLayout({
         className={`${outfit.variable} antialiased`}
       >
         {children}
+        <Toaster 
+          position="top-right"
+        />
       </body>
     </html>
   );

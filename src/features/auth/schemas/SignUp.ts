@@ -19,4 +19,4 @@ export const SignUpSchema = BaseAuthSchema
         path: ['passwordConfirmation']
     })
 
-export type SighUp = z.infer<typeof SignUpSchema>
+export type SignUp = z.infer<typeof SignUpSchema>

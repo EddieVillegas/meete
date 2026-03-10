@@ -1,15 +1,17 @@
 "use server"
 
-import { SighUp, SignUpSchema } from "../schemas/SignUp";
+import authService from "../services/Auth.service";
+import { SignUp, SignUpSchema } from "../schemas/SignUp";
+import { authRepository } from "../services/Auth.repository";
 
 export default async function signUpAction(
-    input: SighUp
+    input: SignUp
 ){
     const { success, data } = SignUpSchema.safeParse(input)
 
-    if(!success){
-        return
-    }
+    if(!success) return
 
-    console.log(data)
+    const response = await authService.register(data)
+
+    return response
 }
