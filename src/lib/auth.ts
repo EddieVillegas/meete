@@ -9,11 +9,15 @@ const database = drizzleAdapter(db, {
 })
 
 const plugins = [nextCookies()]
+const emailAndPasswordRules = {
+    enabled: true,
+    requestAnimationFrame: true
+}
 
 export const auth = betterAuth({
     database,
-    emailAndPassword:{
-        enabled: true
+    emailAndPassword: {
+        ...emailAndPasswordRules
     },
     plugins,
 })

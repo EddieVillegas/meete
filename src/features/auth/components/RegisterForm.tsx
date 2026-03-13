@@ -1,14 +1,13 @@
 "use client"
 
-import { useForm } from "react-hook-form"
+import { useForm, SubmitHandler } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { SignUp, SignUpSchema } from "../schemas/SignUp";
+import { SignUp, SignUpSchema } from "../schemas/auth.schema";
 import { Form, FormInput, FormLabel, FormSubmit, FormError } from "@/components/forms";
 import signUpAction from "../actions/auth.action";
 import toast from "react-hot-toast";
 
 export default function RegisterForm() {
-
     const {
         register,
         handleSubmit,
@@ -19,7 +18,7 @@ export default function RegisterForm() {
         resolver: zodResolver(SignUpSchema),
     })
 
-    const handleOnSubmit =  async (data: SignUp) =>{
+    const handleOnSubmit: SubmitHandler<SignUp> =  async (data) =>{
         const response = await signUpAction(data)
 
         if(response?.error){
@@ -41,7 +40,7 @@ export default function RegisterForm() {
                 placeholder="name"
                 {...register('name')}
             />
-            {errors.name && <FormError>{errors.name.message}</FormError>}
+            <FormError>{errors.name?.message}</FormError>
 
             <FormLabel htmlFor="email">e-mail</FormLabel>
             <FormInput
@@ -50,7 +49,7 @@ export default function RegisterForm() {
                 placeholder="email"
                 {...register('email')}
             />
-            {errors.email && <FormError>{errors.email.message}</FormError>}
+            <FormError>{errors.email?.message}</FormError>
 
             <FormLabel htmlFor="password">password</FormLabel>
             <FormInput
@@ -59,7 +58,7 @@ export default function RegisterForm() {
                 placeholder="password"
                 {...register('password')}
             />
-            {errors.password && <FormError>{errors.password.message}</FormError>}
+            <FormError>{errors.password?.message}</FormError>
 
             <FormLabel htmlFor="password_confirmation">confirm password</FormLabel>
             <FormInput
@@ -68,8 +67,7 @@ export default function RegisterForm() {
                 placeholder="confirm password"
                 {...register('passwordConfirmation')}
             />
-            {errors.passwordConfirmation && <FormError>{errors.passwordConfirmation.message}</FormError>}
-
+            <FormError>{errors.passwordConfirmation?.message}</FormError>
 
             <FormSubmit value="Register"></FormSubmit>
         </Form>

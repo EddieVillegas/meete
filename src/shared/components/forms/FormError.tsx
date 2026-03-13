@@ -1,8 +1,13 @@
 export const FormError = ({
     children
-}: React.PropsWithChildren) => 
-    <p 
-        className="border-l-2 p-2 font-bold bg-red-100 border-red-600 text-red-600 text-sm"
-    >
-        {children}
-    </p>
+}: React.PropsWithChildren
+) => {
+    if(!children) return
+    return (
+        <p
+            className="border-l-2 p-2 font-bold bg-red-100 border-red-600 text-red-600 text-sm"
+        >
+            {children}
+        </p>
+    )
+}
